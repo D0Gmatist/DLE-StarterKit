@@ -3,19 +3,19 @@
 namespace StarterKit\Classes;
 
 class StarterKitClass {
-	protected $logs					= array();
+	protected $logs				= array();
 	public static $runs_counter		= 0;
 
-	protected $rootDir				= FALSE;
+	protected $rootDir			= FALSE;
 	protected $engineDir			= FALSE;
 	protected $moduleDir			= FALSE;
 
-	protected $db					= FALSE;
+	protected $db				= FALSE;
 
-	public $dle_config				= FALSE;
-	public $cfg						= FALSE;
+	public $dle_config			= FALSE;
+	public $cfg				= FALSE;
 
-	public $error_text				= FALSE;
+	public $error_text			= FALSE;
 
 	function __construct() {
 		self::$runs_counter++;
@@ -28,10 +28,10 @@ class StarterKitClass {
 
 		// Определяем конфиги
 		$this->dle_config	= $this->getDleConfig();
-		$this->cfg			= $this->getConfig();
+		$this->cfg		= $this->getConfig();
 
 		// Внедряем класс db mysql
-		$this->db			= $this->getDb();
+		$this->db		= $this->getDb();
 
 	}
 
