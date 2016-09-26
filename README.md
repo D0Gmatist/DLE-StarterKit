@@ -22,11 +22,11 @@ DLE Starter Kit — это готовый набор для разработки
 
 1. Склонировать репозиторий.
 2. Распаковать в эту же папку исходники DLE 11 и выполнить установку по инструкции от CMS.
-3. Выполнить установку модуля (StarterKit.php)
+3. Выполнить установку модуля (dle_module_install.php)
 3. Начать разработку своего модуля на основе заготовки.
 
 
 
 ## Список изменений
-- [CHANGELOG](...)
+- [CHANGELOG](https://github.com/dle-modules/DLE-StarterKit/blob/master/CHANGELOG.md)
 
