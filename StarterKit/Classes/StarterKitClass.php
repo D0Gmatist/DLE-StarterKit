@@ -78,28 +78,6 @@ class StarterKitClass {
 
 	}
 
-	/**
-	 * @throws Exception
-	 */
-	public function checkBeforeInstall() {
-		if ( isset( $this->cfg['minVersion'] ) ) {
-			if ( $this->dle_config['version_id'] < $this->cfg['minVersion'] ) {
-				$this->error_text = 'Установленная версия DLE слишком старая. Необходимо установить DLE не ниже ' . $this->cfg['minVersion'];
-
-			}
-
-			if ( $this->dle_config['version_id'] > $this->cfg['maxVersion'] ) {
-				$this->error_text = 'Установленная версия DLE слишком новая. Необходимо установить DLE не выше ' . $this->cfg['maxVersion'];
-
-			}
-
-		} else {
-			$this->error_text = 'Файл с конфигурацией установки не найден, возмжно установочные файлы модуля не скопированы.';
-
-		}
-
-	}
-
 }
 
 ?>
