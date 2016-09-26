@@ -2,6 +2,13 @@
 
 namespace StarterKit\Classes;
 
+class InitialClass extends StarterKitClass {
+
+	public $step					= 1;
+	public $next_btn				= FALSE;
+
+	public $actions					= FALSE;
+
 	/**
 	 * @throws Exception
 	 */
@@ -26,18 +33,12 @@ namespace StarterKit\Classes;
 
 	}
 
-class InitialClass extends StarterKitClass {
-		$this->logs[] = 'StarterKitClass';
-
-	public $step					= 1;
-	public $next_btn				= FALSE;
-
-	public $actions					= FALSE;
-
 	/**
 	 * @return array
 	 */
 	public function gtSteps() {
+		$this->logs[] = 'gtSteps';
+
 		$this->step = ( (int)$_GET['step'] < 1 ) ? $this->step : (int)$_GET['step'];
 
 		if ( file_exists( $this->rootDir . '/StarterKit/install/steps/' . $this->step . '.php' ) ) {
